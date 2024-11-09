@@ -1,0 +1,35 @@
+.dashboard-container {
+    display: flex;
+    height: 98vh;
+    width: 98vw;
+    overflow: hidden;
+    background-color: #f0f8ff; /* Light sky-blue background */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .friends-list-container-2 {
+    padding-left: 1.5%;
+    padding-top: 20px;
+    height: 98vh;
+    width: 30%;
+    background-color: #d0e7ff; /* Soft blue for the sidebar */
+   
+    border-right: 2px solid #87ceeb;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .chat-interface-container {
+    width: 60%;
+    padding: 20px;
+    background-color: #ffffff; /* White background for chat interface */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #4682b4; /* Steel blue for username */
+    text-align: center;
+  }
+  
