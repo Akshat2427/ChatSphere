@@ -25,7 +25,7 @@ function Dashboard({ socket }) {
 }, [userFriendList]);
   async function fetchDataFromServer() {
     try {
-      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/userInfo`, {
+      const response = await fetch(`https://chatsphere-6vy6.onrender.com/userInfo`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

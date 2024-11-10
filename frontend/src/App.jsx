@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import socketIO from 'socket.io-client';
-const socket = socketIO.connect(`${import.meta.env.VITE_REACT_APP_API_URL}`);
+const socket = socketIO.connect(`https://chatsphere-6vy6.onrender.com`);
 function App() {
   const user = useSelector(state => state.user).user;
   console.log("app.js", user);

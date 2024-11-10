@@ -21,7 +21,7 @@ function FriendsList({ data }) {
 
     const addFriend = useCallback(async () => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/addFriend`, {
+            const response = await fetch(`https://chatsphere-6vy6.onrender.com/addFriend`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function FriendsList({ data }) {
 
     const FriendStatusUpdated = useCallback(async ({ status, sender }) => {
         try {
-            const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/addFriend/updateFriendStatus`, {
+            const response = await fetch(`https://chatsphere-6vy6.onrender.com/addFriend/updateFriendStatus`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function FriendsList({ data }) {
         console.log("demanding chat", e);
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/userInfo/getPreviousChat`, {
+            const response = await fetch(`https://chatsphere-6vy6.onrender.com/userInfo/getPreviousChat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
