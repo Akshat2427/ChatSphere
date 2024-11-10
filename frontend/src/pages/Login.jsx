@@ -41,7 +41,7 @@ const Login = () => {
         };
 
         try {
-            const response = await fetch('https://backend-chat-sphere.vercel.app/login', { 
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/login`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
