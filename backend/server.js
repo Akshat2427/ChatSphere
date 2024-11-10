@@ -3,12 +3,12 @@ const app = express();
 require('dotenv').config();
 const session = require("express-session");
 const cors = require("cors");
-const http = require("http").Server(app);
 const mongoose = require("mongoose");
 const Chat = require("./models/chat");
-const socketIO = require("socket.io")(http, {
+const http = require("http").createServer(app); 
+const socketIO = require("socket.io")(http, {   
     cors: {
-        origin: process.env.CLIENT_URL,  
+        origin: process.env.CLIENT_URL,
         methods: ["GET", "POST"],
         credentials: true,
     }
@@ -20,12 +20,14 @@ const loginRouter = require("./routes/login");
 
 const users = new Map(); 
 
+
 app.use(cors({
-    origin: process.env.CLIENT_URL, 
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
-  }));
+}));
+
 
 app.use(session({
     secret: "key that will sign cookie",
@@ -36,9 +38,12 @@ app.use(session({
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
 app.use("/login", loginRouter);
 app.use("/userInfo", userInfoRouter);
 app.use("/addFriend", addFriend);
+
+
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
@@ -105,13 +110,12 @@ socketIO.on('connection', (socket) => {
     });
 });
 
+
 mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))
     .catch(e => console.error('MongoDB connection error:', e.message));
 
-    app.get("/", (req, res) => {
-        res.send("Hello World");
-    });
+
 http.listen(8080, () => {
-    console.log(`Server listening on ${8080}`);
+    console.log(`Server listening on port 8080`);
 });
