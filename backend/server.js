@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const Chat = require("./models/chat");
 const socketIO = require("socket.io")(http, {
     cors: {
-        origin: "https://chat-sphere-omega.vercel.app",  
+        origin: process.env.CLIENT_URL,  
         methods: ["GET", "POST"],
         credentials: true,
     }
@@ -21,7 +21,7 @@ const loginRouter = require("./routes/login");
 const users = new Map(); 
 
 app.use(cors({
-    origin: 'https://chat-sphere-omega.vercel.app', 
+    origin: process.env.CLIENT_URL, 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
