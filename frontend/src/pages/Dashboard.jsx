@@ -72,6 +72,9 @@ console.log("User Dahboard 99" , userFriendList);
     <div className="dashboard-container">
       <div className="friends-list-container-2">
         <FriendsList data={friends} />
+      {/* <div >Gloabal Chat</div>
+        <div>Anonymous Chat</div>
+        <div>Chat with AI</div>   */}
       </div>
       <div className="chat-interface-container">
         {/* <h2>{user?.user?.username}</h2> */}

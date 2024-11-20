@@ -3,7 +3,7 @@ import './FriendsList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrentTakingTo } from '../store/UserInfo';
 import { setChat } from '../store/chat';
-
+import { FaGlobe, FaUserSecret, FaRobot } from 'react-icons/fa';
 function FriendsList({ data }) {
     const [data2, setData] = useState(null);
     const [addFr, setAddfr] = useState(false);
@@ -129,7 +129,31 @@ function FriendsList({ data }) {
                     )}
                 </div>
             )) : null}
-            <button onClick={() => setAddfr(prev => !prev)}>Add Friend</button>
+          
+             
+              <div className="friend-item" style={{textAlign:"center"}} onClick={() => {
+                    setCurrentTalkingTo({ email: "global@chat", username: "Chat Globally" });
+                    demandPreviousChat({
+                        email1: "global@chat",
+                        email2: "global@chat"
+                    });
+                }}> <FaGlobe style={{textAlign:"center" , fontSize:"50px"}}  title="Global Chat" /></div>
+              <div className="friend-item" style={{textAlign:"center"}} onClick={() => {
+                    setCurrentTalkingTo({ email: "anonyms@chat", username: "Chat Anonyms" });
+                    demandPreviousChat({
+                        email1: "anonyms@chat",
+                        email2: "anonyms@chat"
+                    });}}> <FaUserSecret style={{textAlign:"center" , fontSize:"50px"}}  title="Anonyms Chat"  /></div>
+              <div className="friend-item" style={{textAlign:"center"}} onClick={() => {
+                    setCurrentTalkingTo({ email: "ai@chat", username: "Chat AI" });
+                    demandPreviousChat({
+                        email1: "ai@chat",
+                        email2: "ai@chat"
+                    });}}> <FaRobot style={{textAlign:"center" , fontSize:"50px"}}  title="AI Chat" /></div>
+              <button onClick={() => setAddfr(prev => !prev)}>Add Friend</button>
+     
+   
+            
             {addFr && (
                 <>
                     <input type="text" placeholder="Enter email" value={addFrEmail} onChange={(e) => setAddfrEamil(e.target.value)} />
