@@ -90,4 +90,12 @@
   .chat-input-container button:hover {
     background-color: #5a9bd3;
   }
+
+  @media (max-width: 768px) {
+    .img-friend{
+      visibility: hidden;
+      width: 0px;
+    }
+  }
+
   
