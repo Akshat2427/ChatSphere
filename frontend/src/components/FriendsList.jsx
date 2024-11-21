@@ -21,7 +21,7 @@ function FriendsList({ data }) {
 
     const addFriend = useCallback(async () => {
         try {
-            const response = await fetch(`https://backend-chat-sphere.vercel.app/addFriend`, {
+            const response = await fetch(`https://chatsphere-9hfj.onrender.com/addFriend`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function FriendsList({ data }) {
 
     const FriendStatusUpdated = useCallback(async ({ status, sender }) => {
         try {
-            const response = await fetch(`https://backend-chat-sphere.vercel.app/addFriend/updateFriendStatus`, {
+            const response = await fetch(`https://chatsphere-9hfj.onrender.com/addFriend/updateFriendStatus`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function FriendsList({ data }) {
         console.log("demanding chat", e);
 
         try {
-            const response = await fetch(`https://backend-chat-sphere.vercel.app/userInfo/getPreviousChat`, {
+            const response = await fetch(`https://chatsphere-9hfj.onrender.com/userInfo/getPreviousChat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

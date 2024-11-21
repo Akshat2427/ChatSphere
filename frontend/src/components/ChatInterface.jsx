@@ -20,7 +20,7 @@ function ChatInterface({ socket, username, email }) {
 
   async function responseFromAI(msg) {
     try {
-      const response = await fetch(`https://backend-chat-sphere.vercel.app/ai`, {
+      const response = await fetch(`https://chatsphere-9hfj.onrender.com/ai`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
