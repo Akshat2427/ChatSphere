@@ -3,7 +3,7 @@
     height: 98vh;
     width: 98vw;
     overflow: hidden;
-    background-color: #f0f8ff; /* Light sky-blue background */
+    background-color: #f0f8ff; 
     justify-content: center;
     align-items: center;
   }
@@ -13,7 +13,7 @@
     padding-top: 20px;
     height: 98vh;
     width: 30%;
-    background-color: #d0e7ff; /* Soft blue for the sidebar */
+    background-color: #d0e7ff; 
    
     border-right: 2px solid #87ceeb;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -23,13 +23,13 @@
   .chat-interface-container {
     width: 60%;
     padding: 20px;
-    background-color: #ffffff; /* White background for chat interface */
+    background-color: #ffffff; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
     margin-bottom: 20px;
-    color: #4682b4; /* Steel blue for username */
+    color: #4682b4;
     text-align: center;
   }
   
