@@ -25,7 +25,7 @@ function Dashboard({ socket }) {
 }, [userFriendList]);
   async function fetchDataFromServer() {
     try {
-      const response = await fetch(`https://chatsphere-6vy6.onrender.com/userInfo`, {
+      const response = await fetch(`https://backend-chat-sphere.vercel.app/userInfo`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
